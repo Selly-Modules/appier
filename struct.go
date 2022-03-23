@@ -21,23 +21,23 @@ type AppID = primitive.ObjectID
 
 // BrandPayload ...
 type BrandPayload struct {
-	ID           AppID
-	Name         string
-	Slug         string
-	SearchString string
-	Active       bool
-	Photos       []string
-	Desc         string
-	TotalProduct int64
-	Logo         string
-	Country      CountryInfo
-	CreatedAt    time.Time
-	UpdatedAt    time.Time
+	ID           AppID       `json:"_id"`
+	Name         string      `json:"name"`
+	Slug         string      `json:"slug"`
+	SearchString string      `json:"searchString"`
+	Active       bool        `json:"active"`
+	Photos       []string    `json:"photos"`
+	Desc         string      `json:"desc"`
+	TotalProduct int64       `json:"totalProduct"`
+	Logo         string      `json:"logo"`
+	Country      CountryInfo `json:"country"`
+	CreatedAt    time.Time   `json:"createdAt"`
+	UpdatedAt    time.Time   `json:"updatedAt"`
 }
 
 // CountryInfo ...
 type CountryInfo struct {
-	ID   AppID
-	Name string
-	Code string
+	ID   AppID  `json:"_id"`
+	Name string `json:"name"`
+	Code string `json:"code"`
 }
