@@ -1,7 +1,8 @@
 package appier
 
 const (
-	SubjectRequestProductUpsert = "selly.request.product.upsert"
+	SubjectPingPullService   = "selly.pull.ping"
+	SubjectPullProductUpsert = "selly.pull.product.upsert"
 )
 
 const (
