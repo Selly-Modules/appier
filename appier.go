@@ -41,10 +41,9 @@ func NewClient(config Config) (*Client, error) {
 
 // publishWithJetStream ...
 func publishWithJetStream(streamName, subject string, data []byte) (isPublished bool, err error) {
-	var req = RequestBody{Body: data}
 
 	// Publish jet stream
-	if err = client.natsJetStream.Publish(streamName, subject, toBytes(req)); err != nil {
+	if err = client.natsJetStream.Publish(streamName, subject, data); err != nil {
 		return
 	}
 
