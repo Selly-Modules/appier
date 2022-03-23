@@ -12,6 +12,7 @@ type Client struct {
 	Config        Config
 	natsServer    natsio.Server
 	natsJetStream natsio.JetStream
+	Pull          Pull
 }
 
 var (
