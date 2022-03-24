@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/Selly-Modules/natsio"
+	"github.com/Selly-Modules/redisdb"
 )
 
 // Client ...
@@ -12,12 +13,11 @@ type Client struct {
 	Config        Config
 	natsServer    natsio.Server
 	natsJetStream natsio.JetStream
+	Sync          Sync
 	Pull          Pull
 }
 
-var (
-	client *Client
-)
+var client *Client
 
 // NewClient
 // Init client ...
@@ -34,6 +34,11 @@ func NewClient(config Config) (*Client, error) {
 		Config:        config,
 		natsServer:    natsio.GetServer(),
 		natsJetStream: natsio.GetJetStream(),
+	}
+
+	// Connect redis
+	if err := redisdb.Connect(config.Redis.URI, config.Redis.Password); err != nil {
+		return nil, fmt.Errorf("redis connect failed: %v", err)
 	}
 
 	return client, nil

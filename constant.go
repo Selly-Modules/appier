@@ -15,3 +15,16 @@ const (
 const (
 	JetStreamAppierService = "Service_Appier"
 )
+
+const (
+	RedisSyncAppierPrefix  = "appier_sync_"
+	RedisSyncProduct       = "product"
+	RedisSyncBrand         = "brand"
+	RedisSyncCategory      = "category"
+	RedisSyncSubCategory   = "subcategory"
+	RedisSyncInventory     = "inventory"
+	RedisSyncSupplier      = "supplier"
+	RedisSyncProperty      = "property"
+	RedisSyncPropertyValue = "property_value"
+	RedisSyncSKU           = "sku"
+)
