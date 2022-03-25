@@ -42,7 +42,10 @@ func NewClient(config Config) (*Client, error) {
 	}
 
 	// Init schedule
-	initSchedule()
+	if config.IsScheduled {
+		initSchedule()
+	}
+
 	return client, nil
 }
 
