@@ -1,6 +1,7 @@
 package appier
 
 import (
+	"context"
 	"fmt"
 
 	"github.com/Selly-Modules/redisdb"
@@ -47,10 +48,10 @@ func handleSyncDataToServiceAppier(pattern string, typeData string) {
 
 		processSyncToServiceAppier(typeData, values)
 
-		//// Del keys
-		//for _, key := range keys {
-		//	redisdb.DelKey(context.Background(), key)
-		//}
+		// Del keys
+		for _, key := range keys {
+			redisdb.DelKey(context.Background(), key)
+		}
 	}
 }
 
