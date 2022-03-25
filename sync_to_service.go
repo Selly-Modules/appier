@@ -34,11 +34,16 @@ func (s SyncToService) syncData() {
 
 // handleSyncDataToServiceAppier ...
 func handleSyncDataToServiceAppier(pattern string, typeData string) {
+	fmt.Println("keyProductPattern", pattern)
+
 	for {
 		keys, values := redisdb.GetWithPrefixPattern(pattern, limitGetKeyRedis)
 		if len(keys) == 0 {
 			return
 		}
+
+		fmt.Println("keys:", keys)
+		fmt.Println("values", values)
 
 		payload := toBytes(values)
 		// Convert data
