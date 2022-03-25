@@ -1,7 +1,6 @@
 package appier
 
 import (
-	"context"
 	"fmt"
 
 	"github.com/Selly-Modules/redisdb"
@@ -34,25 +33,30 @@ func (s SyncToService) syncData() {
 
 // handleSyncDataToServiceAppier ...
 func handleSyncDataToServiceAppier(pattern string, typeData string) {
-	fmt.Println("keyProductPattern", pattern)
-
 	for {
 		keys, values := redisdb.GetWithPrefixPattern(pattern)
 		if len(keys) == 0 {
+			fmt.Println("No keys data")
+			return
+		}
+
+		if len(values) == 0 {
+			fmt.Println("No values DATA")
 			return
 		}
 
 		processSyncToServiceAppier(typeData, values)
 
-		// Del keys
-		for _, key := range keys {
-			redisdb.DelKey(context.Background(), key)
-		}
+		//// Del keys
+		//for _, key := range keys {
+		//	redisdb.DelKey(context.Background(), key)
+		//}
 	}
 }
 
 // processSyncToServiceAppier ...
 func processSyncToServiceAppier(typeData string, values []string) {
+	fmt.Println("Sends")
 	for {
 		if len(values) <= 20 {
 			syncDataByList(typeData, values)
