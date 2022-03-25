@@ -15,3 +15,8 @@ func toBytes(data interface{}) []byte {
 func getRedisKey(prefix string, targetID string) string {
 	return fmt.Sprintf("%s%s_%s", RedisSyncAppierPrefix, prefix, targetID)
 }
+
+// getRedisPrefixPattern ...
+func getRedisPrefixPattern(prefix string) string {
+	return fmt.Sprintf("%s%s_*", RedisSyncAppierPrefix, prefix)
+}
