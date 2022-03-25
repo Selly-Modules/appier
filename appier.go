@@ -41,6 +41,8 @@ func NewClient(config Config) (*Client, error) {
 		return nil, fmt.Errorf("redis connect failed: %v", err)
 	}
 
+	// Init schedule
+	initSchedule()
 	return client, nil
 }
 
