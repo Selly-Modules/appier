@@ -24,7 +24,7 @@ type Scheduler struct {
 // New ...
 func newSchedule(jobs ...*Job) *Scheduler {
 	l, _ := time.LoadLocation("Asia/Ho_Chi_Minh")
-	c := cron.New(cron.WithLocation(l))
+	c := cron.New(cron.WithSeconds(), cron.WithLocation(l))
 
 	return &Scheduler{
 		cron: c,
