@@ -47,7 +47,7 @@ func (s *Scheduler) startSchedule() {
 func initSchedule() {
 	jobs := []*Job{
 		{
-			Spec: "*/ * * * *",
+			Spec: "*/30 * * * * *",
 			Name: "Start job sync data to service appier",
 			Cmd:  SyncToService{}.syncData,
 		},
