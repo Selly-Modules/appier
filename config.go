@@ -4,6 +4,7 @@ import "github.com/Selly-Modules/natsio"
 
 // Config ...
 type Config struct {
-	Redis RedisCfg
-	Nats  natsio.Config
+	Redis       RedisCfg
+	Nats        natsio.Config
+	IsScheduled bool
 }
