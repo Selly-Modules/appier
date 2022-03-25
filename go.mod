@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/Selly-Modules/natsio v0.0.0-20220321031929-3fe4271f1bbc
-	github.com/Selly-Modules/redisdb v1.0.1-0.20220325073544-1ab40b99b8b9
+	github.com/Selly-Modules/redisdb v1.0.1-0.20220325075428-59ae8ffc4812
 	github.com/robfig/cron/v3 v3.0.1
 )
 
