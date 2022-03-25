@@ -10,6 +10,8 @@ github.com/Selly-Modules/redisdb v1.0.1-0.20220325075428-59ae8ffc4812 h1:Y2/O7z/
 github.com/Selly-Modules/redisdb v1.0.1-0.20220325075428-59ae8ffc4812/go.mod h1:J2GWyoHN5b8RfZXUJmGnEFw7Z4UIogUM4Ry76DstktQ=
 github.com/Selly-Modules/redisdb v1.0.1-0.20220325090539-b1135a975fd6 h1:WotogiPSQRqZShd9uapfLDZcGL2VRCNuvbi3sun1C70=
 github.com/Selly-Modules/redisdb v1.0.1-0.20220325090539-b1135a975fd6/go.mod h1:J2GWyoHN5b8RfZXUJmGnEFw7Z4UIogUM4Ry76DstktQ=
+github.com/Selly-Modules/redisdb v1.0.1-0.20220325101005-62529474a7e1 h1:3qCx6Wpqn5AOevh3QEOjX2NFu1f4S540bAUz6o7PRqI=
+github.com/Selly-Modules/redisdb v1.0.1-0.20220325101005-62529474a7e1/go.mod h1:J2GWyoHN5b8RfZXUJmGnEFw7Z4UIogUM4Ry76DstktQ=
 github.com/cespare/xxhash/v2 v2.1.1 h1:6MnRN8NT7+YBpUIWxHtefFZOKTAPgGjpQSxqLNn0+qY=
 github.com/cespare/xxhash/v2 v2.1.1/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/cespare/xxhash/v2 v2.1.2 h1:YRXhKfTDauu4ajMg1TPgFO5jnlC2HCbmLXMcTG5cbYE=
