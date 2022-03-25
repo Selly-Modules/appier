@@ -37,12 +37,10 @@ func handleSyncDataToServiceAppier(pattern string, typeData string) {
 	for {
 		keys, values := redisdb.GetWithPrefixPattern(pattern)
 		if len(keys) == 0 {
-			fmt.Println("No keys data")
 			return
 		}
 
 		if len(values) == 0 {
-			fmt.Println("No values DATA")
 			return
 		}
 
@@ -57,7 +55,6 @@ func handleSyncDataToServiceAppier(pattern string, typeData string) {
 
 // processSyncToServiceAppier ...
 func processSyncToServiceAppier(typeData string, values []string) {
-	fmt.Println("Sends")
 	for {
 		if len(values) <= 20 {
 			syncDataByList(typeData, values)
